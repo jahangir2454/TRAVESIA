@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Rating from 'react-rating';
+import { Link } from 'react-router-dom';
 import './ServicesItem.css';
 
 const ServicesItem = ({ services }) => {
@@ -26,7 +27,9 @@ const ServicesItem = ({ services }) => {
                             </div>
                             <div className="d-flex justify-content-md-center ">
                                  <button className="all-btn mx-2">Add To Cart</button>
+                                <Link to={`/servicesdatelis/${services._id}`}>
                                  <button className="all-btn">View Details</button>
+                                </Link>
                            </div>
                       </div>
                     </Col>

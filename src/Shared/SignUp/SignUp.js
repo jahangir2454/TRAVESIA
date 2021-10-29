@@ -1,33 +1,36 @@
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { useHistory, useLocation } from 'react-router';
+import { useHistory } from 'react-router';
 import useAuth from '../../Hooks/useAuth';
+import './SignUp.css';
 
 
-const Login = () => {
-    const { googleSignIn,setUser,error,setError,signIn,setIsLoading } = useAuth();
+const SignUp = () => {
+    const { googleSignIn,user,setUser,error,setError,signUp,setIsLoading } = useAuth();
     const history = useHistory();
-    const location = useLocation()
+    const [name,setName] = useState('')
     const [email,setEmail] = useState('')
-    const [password,setPassword] = useState('')
+    const [password, setPassword] = useState('');
+
     const hendelaccoutn = () => {
-        history.push('/signup');
+        history.push('/login');
     }
-    const url = location.state?.from || '/home';
+
     const googleSignUp = () => {
         googleSignIn()
             .then(result => {
                 setIsLoading(true)
-                setUser(result.user)
-                history.push(url)
-            }).catch(error => {
+            setUser(result.user)
+            }).catch(err => {
                 setError(error.message)
             })
             .finally(() => {
                 setIsLoading(false)
-         })
+            })
     }
-   
+     const hendelName = (e) => {
+        setName (e.target.value)
+    }
     const hendelEmail = (e) => {
         setEmail (e.target.value)
     }
@@ -35,50 +38,49 @@ const Login = () => {
         setPassword (e.target.value)
     }
     const hendelSignUp = (e) => {
-        e.preventDefault()
-        signIn(email, password)
+        e.preventDefault();
+        signUp(email, password)
             .then(result => {
                 setIsLoading(true)
                 setUser(result.user)
                 setError('')
             }).catch(error => {
-                setError(error.message)
+                 setError(error.message)
             })
-            .finally(() => {
+        .finally(() => {
                 setIsLoading(false)
             })
-    }
+    } 
     return (
         <div>
-             <div>
             <Container>
                 <Row className="d-flex justify-content-center align-items-center my-5">
                     <Col md={6}>
+
                         <div className="text-center signup">
-                                <div><h2>Welcome Back</h2></div>
-                                <h1>Log In</h1>
-                        
-                        <form onSubmit={hendelSignUp}>
-                            <input placeholder="Enter email" type="email" onBlur = {hendelEmail} />
-                                <input placeholder="Enter password" type="password" onBlur={hendelPassword} />
+                            <div><h2>Create a New Account</h2></div>
+                        <form onClick={hendelSignUp}>
+                            <input onBlur={hendelName} placeholder="Enter Name" type="text"  />
+                            <input onBlur={hendelEmail} placeholder="Enter email" type="email"  />
+                                <input onBlur={hendelPassword} placeholder="Enter password" type="password"  />
                                 <p className='errors'>{error}</p>
                              <button className="all-btn" type="submit">Submit</button>
                             </form>
-                            <div onClick={googleSignUp}  className="google-signup d-flex justify-content-around signup-item my-3">
+                            <div onClick={googleSignUp} className="google-signup d-flex justify-content-around signup-item my-3">
                                 <h5>Sign Up With Google</h5>
                                 <img src="https://i.ibb.co/xG1H7VS/google-symbol.png" alt="" />
                             </div>
                             <div className="d-flex justify-content-around signup-item my-3">
                                 <h3>Forgot Password?</h3>
-                                <h4 onClick={hendelaccoutn}>Create an Account</h4>
+                                <h4 onClick={hendelaccoutn}>Allready have a account</h4>
                             </div>
-                    </div>
+                        </div>
+                        
                     </Col>
                 </Row>
             </Container>
         </div>
-        </div>
     );
 };
 
-export default Login;
+export default SignUp;
