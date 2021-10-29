@@ -1,0 +1,56 @@
+.banner-img{
+    position: relative;
+    height: 100vh;
+}
+.banner-img::after{
+    content:'';
+    position:absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    background:rgba(0,0,0,0.5);
+    
+}
+.banner-img img{
+    width: 100%;
+    height: 100%;
+}
+.banner-item{
+    position:absolute;
+    width: 100%;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.banner-item h1{
+    color: #ddd;
+    font-size: 40px;
+    font-weight: 700;
+}
+.banner-item h1 span{
+    color: #f9461d;
+    font-size: 40px;
+    font-weight: 700;
+}
+.banner-item p{
+    color: #ddd;
+    font-size: 16px;
+    font-weight: 500;
+}
+.all-btn{
+    background:none;
+    border: none;
+    outline: none;
+    color: #191919;
+    background: #fff;
+    border:1px solid  #f9461d;
+    border-radius: 20px;
+    padding: 8px 18px;
+    transition: 0.5s ease-in-out;
+    font-weight: 500;
+}
+.all-btn:hover{
+    background: #f9461d;
+    color: #fff;
+}

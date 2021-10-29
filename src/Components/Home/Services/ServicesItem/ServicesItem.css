@@ -1,0 +1,33 @@
+.servicesItem{
+    text-align:center;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    padding-bottom: 15px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition:0.5s ease-in-out;
+    overflow: hidden;
+}
+.servicesItem:hover img{
+    transform: scale(1.1);
+}
+.servicesItem:hover{
+    transform: translatey(-10px);
+}
+.servicesItem img{
+    width: 100%;
+    transition: 0.5s ease-in-out;
+}
+.servicesItem h3,h4{
+    color: #f9461d;
+    font-weight: 600;
+    margin: 6px 0;
+}
+.servicesItem p{
+    color: rgba(150, 150, 150, 0.867);
+    font-size: 16px;
+    font-weight: 400;
+    margin: 6px 0;
+}
+.icon{
+    color: #f48c06;
+}

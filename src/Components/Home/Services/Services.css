@@ -1,0 +1,14 @@
+.services-header h2{
+    color: #f9461d;
+    font-weight: 700;
+    font-size: 35px;
+}
+.services-header p{
+    font-size: 16px;
+    color: #8f8f8f;
+}
+.service{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 14px;
+}

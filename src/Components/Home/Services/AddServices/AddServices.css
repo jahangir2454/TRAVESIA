@@ -1,0 +1,8 @@
+.addItem form{
+    display: flex;
+    flex-direction: column;
+}
+.addItem form input{
+    margin: 6px 0;
+    padding: 7px 10px;
+}
