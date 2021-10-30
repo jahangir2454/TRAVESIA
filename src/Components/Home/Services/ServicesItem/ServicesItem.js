@@ -25,10 +25,9 @@ const ServicesItem = ({ services }) => {
                                 readonly  
                                 />
                             </div>
-                            <div className="d-flex justify-content-md-center ">
-                                 <button className="all-btn mx-2">Add To Cart</button>
+                            <div className="">
                                 <Link to={`/servicesdatelis/${services._id}`}>
-                                 <button className="all-btn">View Details</button>
+                                 <button className="all-btn">Book Now</button>
                                 </Link>
                            </div>
                       </div>

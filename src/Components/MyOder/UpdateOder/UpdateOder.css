@@ -1,0 +1,28 @@
+.update-user img{
+    width: 100%;
+}
+.updaet-userForm form input{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-bottom: 1px solid #ddd;
+}
+.updaet-userForm form input:focus{
+    border-bottom: 2px solid #f9461d;
+}
+.user-update {
+    border-bottom: 1px solid #ddd;
+    padding-top: 10px;
+}
+.user-update h5{
+    color: #f9461d;
+}
+.user-update h3{
+   font-size:20px;
+}

@@ -40,6 +40,7 @@ const Login = () => {
             .then(result => {
                 setIsLoading(true)
                 setUser(result.user)
+                history.push(url)
                 setError('')
             }).catch(error => {
                 setError(error.message)

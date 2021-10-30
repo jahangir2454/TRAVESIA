@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { useHistory } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../Hooks/useAuth';
 import './SignUp.css';
 
 
 const SignUp = () => {
-    const { googleSignIn,user,setUser,error,setError,signUp,setIsLoading } = useAuth();
+    const { googleSignIn,setUser,error,setError,signUp,setIsLoading } = useAuth();
     const history = useHistory();
+    const location = useLocation()
     const [name,setName] = useState('')
     const [email,setEmail] = useState('')
     const [password, setPassword] = useState('');
@@ -15,12 +16,13 @@ const SignUp = () => {
     const hendelaccoutn = () => {
         history.push('/login');
     }
-
+const url = location.state?.from || '/home';
     const googleSignUp = () => {
         googleSignIn()
             .then(result => {
                 setIsLoading(true)
-            setUser(result.user)
+                setUser(result.user)
+                history.push(url)
             }).catch(err => {
                 setError(error.message)
             })
@@ -43,6 +45,7 @@ const SignUp = () => {
             .then(result => {
                 setIsLoading(true)
                 setUser(result.user)
+                history.push(url)
                 setError('')
             }).catch(error => {
                  setError(error.message)

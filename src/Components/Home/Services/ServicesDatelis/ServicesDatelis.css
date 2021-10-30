@@ -1,0 +1,31 @@
+.serviceDatelis-img img{
+    width: 100%;
+}
+.bookNow{
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius:10px;
+}
+.bookNow input,textarea{
+    width: 100%;
+    margin: 6px 0;
+    padding: 8px 10px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #ddd;
+}
+.bookNow input:focus{
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #f9461d;
+}
+.bookNow textarea:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #f9461d;
+}
