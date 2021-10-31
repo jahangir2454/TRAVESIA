@@ -8,6 +8,7 @@ import ServicesDatelis from './Components/Home/Services/ServicesDatelis/Services
 import ManageAllOders from './Components/ManageAllOrders/ManageAllOders';
 import MyOder from './Components/MyOder/MyOder';
 import UpdateOder from './Components/MyOder/UpdateOder/UpdateOder';
+import NotFound from './Components/NotFound/NotFound';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Footer from './Shared/Footer/Footer';
 import Header from './Shared/Header/Header';
@@ -47,7 +48,10 @@ function App() {
             </Route>
           <PrivateRoute path='/servicesdatelis/:id'>
             <ServicesDatelis></ServicesDatelis>
-          </PrivateRoute>
+            </PrivateRoute>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
         </Switch>
         <Footer></Footer>
       </BrowserRouter>
