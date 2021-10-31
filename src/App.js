@@ -45,11 +45,11 @@ function App() {
             <Route path='/myoder'>
               <MyOder></MyOder>
             </Route>
-          <Route path='/servicesdatelis/:id'>
+          <PrivateRoute path='/servicesdatelis/:id'>
             <ServicesDatelis></ServicesDatelis>
-          </Route>
+          </PrivateRoute>
         </Switch>
-        {/* <Footer></Footer> */}
+        <Footer></Footer>
       </BrowserRouter>
       </AuthProvider>
     </div>
@@ -57,7 +57,3 @@ function App() {
 }
 
 export default App;
-
-/* 
-https://travelapp-c4cfa.web.app/
-*/

@@ -63,7 +63,7 @@ const ServicesDatelis = () => {
                                 <input placeholder="Name" {...register("name")} />
                                 <input type="number" placeholder="Phone Number" {...register("number")} />
                                 <textarea placeholder="Address" {...register("address")} />
-                                <input type="submit" />
+                                <input className="all-btn" type="submit" />
                             </form>
                             
                         </div>

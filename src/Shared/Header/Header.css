@@ -9,13 +9,34 @@
 .headerNav a{
     text-decoration: none;
     color: #f9461d;
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 18px;
     margin-right: 15px;
+    transition: 0.5s ease-in-out;
+}
+.headerNav a:hover{
+    color: #191919;
 }
 .user-img img{
     width: 40px;
     height:40px;
     border-radius:50%;
     border:1px solid #f9461d;
+}
+.travesia h2{
+    color: #191919;
+    cursor: pointer;
+}
+.travesia h2 span{
+    color: #f9461d;
+}
+.login{
+    padding: 4px 15px;
+    border: 1px solid #f9461d;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+}
+.login:hover{
+    background-color: #f9461d;
+    color: #fff;
 }

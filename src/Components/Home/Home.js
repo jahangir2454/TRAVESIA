@@ -1,7 +1,6 @@
 import React from 'react';
 import Banner from './Banner/Banner';
 import Choose from './Choose/Choose';
-import GoogleMap from './GoogleMap/GoogleMap';
 import Services from './Services/Services';
 import Travellers from './Travellers/Travellers';
 
@@ -12,7 +11,6 @@ const Home = () => {
             <Services></Services>
             <Travellers></Travellers>
             <Choose></Choose>
-            <GoogleMap></GoogleMap>
         </div>
     );
 };

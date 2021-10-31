@@ -6,7 +6,7 @@ import './ServicesItem.css';
 
 const ServicesItem = ({ services }) => {
 
-    console.log(services)
+    
     return (
         <div>
             <Container>

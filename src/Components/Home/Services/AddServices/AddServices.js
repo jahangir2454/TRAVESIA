@@ -24,7 +24,12 @@ const AddServices = () => {
     return (
         <div>
             <Container>
-                <Row className='justify-content-center my-5'>
+                <Row className="d-flex justify-content-center align-items-center">
+                    <Col className="text-center add-services mt-md-3">
+                        <h2>Add A Services</h2>
+                    </Col>
+                </Row>
+                <Row className='justify-content-center mb-2'>
                     <Col md={6}>
                         <div className='addItem'>
                         <form onSubmit={handleSubmit(onSubmit)}>
