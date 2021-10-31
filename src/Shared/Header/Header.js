@@ -20,7 +20,8 @@ const Header = () => {
                     </Nav>
                     <Nav>
                     <NavLink to='/home'>Home</NavLink>
-                    <NavLink to='/addservices'>AddServices</NavLink>
+                    {user.email&&<NavLink to='/addservices'>AddServices</NavLink>}
+                    {user.email&&<NavLink to='/manage'>Manage All Oders</NavLink>}
                     {user.email&&<NavLink to='/myoder'>MyOder</NavLink>}
                     {user.email ? <NavLink onClick={signout} to='/login'>Logout</NavLink> :
                     <NavLink to='/login'>Login</NavLink>

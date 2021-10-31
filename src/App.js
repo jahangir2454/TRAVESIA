@@ -5,6 +5,7 @@ import AuthProvider from './Components/Context/AuthProvider';
 import Home from './Components/Home/Home';
 import AddServices from './Components/Home/Services/AddServices/AddServices';
 import ServicesDatelis from './Components/Home/Services/ServicesDatelis/ServicesDatelis';
+import ManageAllOders from './Components/ManageAllOrders/ManageAllOders';
 import MyOder from './Components/MyOder/MyOder';
 import UpdateOder from './Components/MyOder/UpdateOder/UpdateOder';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route path='/signup'>
             <SignUp></SignUp>
+            </Route>
+            <Route path='/manage'>
+              <ManageAllOders></ManageAllOders>
             </Route>
              <Route path='/update/:id'>
                 <UpdateOder></UpdateOder>

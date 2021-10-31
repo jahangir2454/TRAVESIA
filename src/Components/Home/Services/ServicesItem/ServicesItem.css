@@ -13,8 +13,13 @@
 .servicesItem:hover{
     transform: translatey(-10px);
 }
+.servicesItem{
+    height:100%;
+    cursor: pointer;
+}
 .servicesItem img{
     width: 100%;
+    height:250px;
     transition: 0.5s ease-in-out;
 }
 .servicesItem h3,h4{

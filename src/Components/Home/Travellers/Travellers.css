@@ -1,0 +1,58 @@
+.travelers{
+    position: relative;
+    width: 100%;
+}
+.travelers img{
+    width: 100%;
+}
+.travelers:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    background: rgba(247, 247, 247, 0.63);
+}
+.travelers-servic{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.travels-img img{
+    width: 100%;
+}
+.travels-item h2{
+    font-size: 18px;
+    color:rgb(161, 161, 161);
+}
+.travels-item h5{
+    font-size: 30px;
+    color:#f9461d;
+}
+.travels-planning h3{
+    font-size: 24px;
+    color:rgb(158, 158, 158);
+}
+.travels-planning h6{
+    font-size: 16px;
+    color:rgb(129, 129, 129);
+}
+.travels-planning h6 span{
+    font-size: 16px;
+    color:#f9461d !important;
+    margin-left: 20px;
+}
+.travels-planning p{
+    color: rgb(165, 165, 165);
+}
+.travels-icon i{
+    color: #f48c06;
+}
+.travels-item {
+    margin-top: 20px;
+    padding: 20px 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}

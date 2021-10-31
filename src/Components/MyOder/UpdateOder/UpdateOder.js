@@ -7,7 +7,7 @@ const UpdateOder = () => {
     const { id } = useParams();
     const [user, setUser] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/oders/${id}`)
+        fetch(`https://warm-spire-77307.herokuapp.com/oders/${id}`)
             .then(res => res.json())
             .then(data => {
             setUser(data)
@@ -31,7 +31,7 @@ const UpdateOder = () => {
     }
      const hendelSubmit = e => {
          e.preventDefault();
-         fetch(`http://localhost:5000/oders/${id}`, {
+         fetch(`https://warm-spire-77307.herokuapp.com/oders/${id}`, {
              method: 'PUT',
              headers: {
                  'content-type': 'application/json'
@@ -69,7 +69,7 @@ const UpdateOder = () => {
                     <Col md={6}>
                         <div className='updaet-userForm'>
                             <form onSubmit={hendelSubmit}>
-                                <input type="text" onChange={hendeladdress} value={user?.address} />
+                            <input type="text" onChange={hendeladdress} value={user?.address} />
                            <input type="text" onChange={hendelNumber} value={user?.number}/>
                            <input type="text" onChange={hendelEmail} value={user?.email}/>
                             <button className="all-btn" type="submit">Update</button>

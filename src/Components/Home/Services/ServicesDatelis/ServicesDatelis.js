@@ -15,7 +15,7 @@ const ServicesDatelis = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
   
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${id}`)
+        fetch(`https://warm-spire-77307.herokuapp.com/services/${id}`)
             .then(res => res.json())
             .then(data => {
                 setService(data)
@@ -23,8 +23,9 @@ const ServicesDatelis = () => {
     }, [])
    
     const onSubmit = data => {
+        console.log(data)
         data.service = service
-        fetch(`http://localhost:5000/Oder/${user.email}`, {
+        fetch(`https://warm-spire-77307.herokuapp.com/Oder/${user.email}`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -33,7 +34,8 @@ const ServicesDatelis = () => {
         })
             .then(res => res.json())
             .then(data => {
-            history.push('/myoder')
+                history.push('/myoder')
+                
         })
         
         

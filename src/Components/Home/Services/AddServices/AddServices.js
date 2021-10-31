@@ -6,7 +6,7 @@ import './AddServices.css';
 const AddServices = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/services', {
+        fetch('https://warm-spire-77307.herokuapp.com/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

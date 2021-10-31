@@ -11,7 +11,7 @@ const OderShow = (props) => {
     const hendeldelet = id => {
         const sure = window.confirm('Are you sure you want to delete this item')
         if (sure) {
-            fetch(`http://localhost:5000/oder/${id}`, {
+            fetch(`https://warm-spire-77307.herokuapp.com/oder/${id}`, {
             method:'Delete'
         })
             .then(res => res.json())
