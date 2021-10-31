@@ -6,7 +6,7 @@ import './ManageAllOder.css'
 const ManageAllOders = () => {
     const [manage,setManage] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/oder')
+        fetch('https://warm-spire-77307.herokuapp.com/oder')
             .then(res => res.json())
             .then(data => {
                 setManage(data)
